@@ -1,3 +1,25 @@
+# Understanding Student Flexibility in Online Learning using Machine Learning Algorithms .
+
+This project explores how students adapt to online learning environments using exploratory data analysis (EDA) and machine learning. A dataset containing demographic and technological attributes is analyzed to predict student flexibility levels. Several classification models are evaluated, with the RandomForestClassifier showing the highest accuracy. The findings provide insights that can help educational institutions optimize online learning strategies and support student engagement.
+
+## Models Used
+
+##### RandomForestClassifier
+##### KNeighborsClassifier
+##### SVC 
+##### LogisticRegression 
+##### XGBClassifier 
+
+## Images
+<img width="448" alt="Screenshot 2024-09-26 at 8 32 56 AM" src="https://github.com/user-attachments/assets/6fba34f4-abf0-45be-ae17-bff301f53f02">
+
+<img width="448" alt="Screenshot 2024-09-26 at 8 33 04 AM" src="https://github.com/user-attachments/assets/0ca8d161-aeca-458c-9e7f-26bfb82b7ed7">
+
+<img width="448" alt="Screenshot 2024-09-26 at 8 33 09 AM" src="https://github.com/user-attachments/assets/80974c08-f2a8-470e-82ab-ea79488ceee0">
+
+<img width="448" alt="Screenshot 2024-09-26 at 8 33 19 AM" src="https://github.com/user-attachments/assets/2727d428-e86d-4bf5-a394-10cba6995151">
+
+## Code
 import numpy as np
 import pandas as pd
 import plotly.express as px
