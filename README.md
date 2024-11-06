@@ -2,8 +2,6 @@
 
 This project explores how students adapt to online learning environments using exploratory data analysis (EDA) and machine learning. A dataset containing demographic and technological attributes is analyzed to predict student flexibility levels. Several classification models are evaluated, with the RandomForestClassifier showing the highest accuracy. The findings provide insights that can help educational institutions optimize online learning strategies and support student engagement.
 
-# Understanding Student Flexibility in Online Learning using Machine Learning Algorithms.
-
 ## Models Used
 
 ##### RandomForestClassifier
@@ -11,6 +9,8 @@ This project explores how students adapt to online learning environments using e
 ##### SVC 
 ##### LogisticRegression 
 ##### XGBClassifier 
+
+# Understanding Student Flexibility in Online Learning using Machine Learning Algorithms.
 
 1. Introduction 
 
