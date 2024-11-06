@@ -1,6 +1,8 @@
-# Understanding Student Flexibility in Online Learning using Machine Learning Algorithms .
+# Elevator Pitch
 
 This project explores how students adapt to online learning environments using exploratory data analysis (EDA) and machine learning. A dataset containing demographic and technological attributes is analyzed to predict student flexibility levels. Several classification models are evaluated, with the RandomForestClassifier showing the highest accuracy. The findings provide insights that can help educational institutions optimize online learning strategies and support student engagement.
+
+# Understanding Student Flexibility in Online Learning using Machine Learning Algorithms.
 
 ## Models Used
 
@@ -10,108 +12,46 @@ This project explores how students adapt to online learning environments using e
 ##### LogisticRegression 
 ##### XGBClassifier 
 
-## Images
+1. Introduction 
+
+In recent years, the landscape of education has had drastic change with the emergence of e-learning (Pulham Graham, 2018). COVID-19 pandemic is one of the major reasons which accelerated e-learning, as the educational institute required an alternative towards physical classes (Hodges et al., 2020). In- stitutes worldwide started viewing the e-learning platforms as the primary method of learning which brings forth a question: how can students thrive in this digital learning environment? Understanding and predicting students’ adaptability levels in online education is important for several reasons. Firstly, it allows educators and institutions to make learning experiences such to meet the diverse needs of students, ensuring that each student can engage effectively regardless of their curriculum (Ally, 2008). Moreover, by identifying students who may struggle with the e-learning platform, various strategies can be implemented to provide additional support and resources, ultimately providing productive and fair educational environment (Artino et al., 2011). Machine learning techniques offer a promising approach for addressing this challenge. By using vast amounts of data on student demographics, behaviors, and learning outcomes, machine learning models can uncover hidden patterns and insights that traditional methods may overlook (Kotsiantis et al., 2007). These models have the potential to not only predict students’ adaptability levels with a high degree of accuracy but also provide actionable recommendations for personalized in- terventions, thereby optimizing the online learning experience for all stakeholders (Hastie et al., 2009). In this study, an exploration of machine learning approaches for predicting students’ adaptability levels in online education is undertaken. Through a complex analysis of the dataset containing various student attributes and preferences, the aim is to highlight factors that influence students’ ability to thrive in digital learning environments. By uncovering these insights, contributions to the ongoing efforts to uplift the effectiveness of online education for learners worldwide are sought.
+
+2. Problem Statement
+
+In the wake of the COVID-19 pandemic, educational institutions worldwide have been compelled to swiftly transition to online learning platforms. This rapid shift has caused significant questions regarding how students are adapting to this new mode of education delivery. Likewise, there grows concern in need of understanding the perspective of students around such adaptation. Similarly, what changes is this going to bring in the mode of learning will it be positive or negative, what effects it will have in the shaping the future of the world, can it be enhanced to make the result more positive by identifying its weakness and working on them? Hence, understanding the verity of complexity for student’s adaptability around online learning environments is important for educational institutions seeking to optimize their instructional strategies. By gaining insights into the various factors influencing student flexibility, schools can utilize various strategies to meet the needs of their student. From demographic characteristics (age, gender, education level, and location) to technological preferences (various tools, devices, and platforms), each aspect plays a crucial role in shaping students’ experiences and outcomes in the online learning landscape. The dataset analysis helps decision-making in online edu- cation. It helps institutions create fair strategies and courses based on students’ backgrounds, ensuring equal accessibility for all. Additionally, it assists in resource allocation by un- derstanding students’ preferences for digital tools and inter- net access. Predictive models identify students needing extra support, like personalized tutors. Valuable insights are gained by spotting patterns between factors and students’ adaptability levels, for example providing extra resources towards targeted students in regards to their need and convince can help dealing with hard times and not being deprived to quality education. Understanding these factors guides the design of interactiveand highly efficient online learning environments, benefiting all students. Moreover, the goal is to help schools improve online learning by understanding students’ adaptability. With this insight, schools can create better learning experiences that empower all students to succeed in digital classrooms. By focusing on adaptability and efficiency, education can provide equal learning opportunities for everyone.
+
+
+3. Dataset Descrption:
+
+The dataset used in this analysis, sourced from Kaggle, includes demographic details like education level, gender, and age, along with technological factors such as device and internet usage. It contains 1205 entries, each representing a different student profile. Further, upon analysis the dataset shows no missing values, indicating it's ready for analysis. Demographic variables like education level and gender display diversity, reflecting the student population's heterogeneity. Technological factors like device and internet usage offer insights into students' digital engagement with online learning platforms. Table I shows all the features and their type along with the categorical value range.
+
 <img width="448" alt="Screenshot 2024-09-26 at 8 32 56 AM" src="https://github.com/user-attachments/assets/6fba34f4-abf0-45be-ae17-bff301f53f02">
+
+Similarly, checking for the correlation of the features interesting insights into the factors influencing students’ perspective on flexibility in online learning can be seen. Firstly, while being an IT student shows a slight positive correlation with flexibility level, suggesting IT students are more flexible as they have knowledge of online platforms, hence this insight can help institutes in incorporating basic IT skill classes to students in order to make them more flexible. Hence, such kind of information can be derived from figure 1 of correlation between each of the 11 features.
 
 <img width="448" alt="Screenshot 2024-09-26 at 8 33 04 AM" src="https://github.com/user-attachments/assets/0ca8d161-aeca-458c-9e7f-26bfb82b7ed7">
 
-<img width="448" alt="Screenshot 2024-09-26 at 8 33 09 AM" src="https://github.com/user-attachments/assets/80974c08-f2a8-470e-82ab-ea79488ceee0">
+4. Data Pre-processing
+
+In the data preprocessing stage, a technique known as Ordinal Encoding was applied to convert categorical variables into numerical representations. This process ensures
+compatibility with machine learning models (Pedregosa et al., 2011). For example, consider a categorical variable such as ”Education Level” with categories like ”High School,” ”Bachelor’s Degree,” and ”Master’s Degree.” Through Ordinal Encoding, each category is assigned a unique numerical value. For instance, ”High School” might be represented as 0, ”Bachelor’s Degree” as 1, and ”Master’s Degree” as 2. This encoding facilitates the interpretation of categorical data by machine learning algorithms, which typically require numerical input. By preprocessing the data in this manner, a dataset is created that can be effectively analyzed and utilized by machine learning models to extract valuable insights (Pedregosa et al.,2011). Following is the top 4 records of the dataset after the conversion of the data.
+
+5. Model Exploration
+
+In the phase of model exploration, five of classification algorithms was utilized to identify the most suitable approach for predicting student flexibility levels. The algorithms explored encompassed RandomForestClassifier, KNeighborsClassifier, Support Vector Classifier (SVC), Logistic Regression, and XGBoostClassifier. For each of these algorithms, the processinvolved training the model using the training dataset, which comprises a subset of the available data. This training phase allows the model to learn the underlying patterns and relationships within the data (James et al., 2013). Following the training phase, the performance of each model was assessed using the testing dataset, which serves as an independent measure to evaluate the model’s predictive capability. Metrics such as precision, recall, and F1-score were employed to gauge the model’s effectiveness in correctly classifying instances across different flexibility levels (James et al., 2013). Basically, the dataset used might have had more data for certain flexibility levels compared to others. To make sure each of the model doesn’t favor the more common flexibility levels and overlook the less common ones, technique called Synthetic Minority Over-sampling Technique (SMOTE) was used. SMOTE helps to balance out the dataset by creating more data points for the flexibility levels that are less represented. This way, each model gets trained on a more even distribution of data for each flexibility level, which should help it make more accurate predictions overall. (Chawla et al., 2002). Among the models evaluated, the RandomForestClassifier and XGBoostClassifier emerged as particularly promising, both achieving an accuracy of 86 percentage . These models demonstrated robust perfor- mance in classifying students into different flexibility levels, as evidenced by their precision, recall, and F1-score metrics (Saito and Rehmsmeier, 2015).
 
 <img width="448" alt="Screenshot 2024-09-26 at 8 33 19 AM" src="https://github.com/user-attachments/assets/2727d428-e86d-4bf5-a394-10cba6995151">
 
-## Code
-import numpy as np
-import pandas as pd
-import plotly.express as px
-import seaborn as sns
-import matplotlib as mpl
-import matplotlib.pyplot as plt
-%matplotlib inline
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn import svm
-from sklearn.linear_model import LogisticRegression
-from sklearn.svm import SVC
-from sklearn.metrics import accuracy_score
-from sklearn.model_selection import train_test_split, GridSearchCV
-from sklearn.metrics import precision_score,recall_score
-from sklearn.metrics import f1_score
-from sklearn.metrics import confusion_matrix,accuracy_score, classification_report
-from imblearn.over_sampling import SMOTE
-from sklearn.preprocessing import OrdinalEncoder
-from sklearn.metrics import classification_report
-from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
+6. Performance Assessment
 
+In assessing the performance of the models, a set of standard metrics was employed, including precision, recall, and F1- score. These metrics provide a comprehensive evaluation of the models’ effectiveness in accurately classifying instances across various flexibility levels (James et al., 2013).
 
-df = pd.read_csv('students_adaptability_level_online_education.csv')
+A. Model Evaluation
+In analyzing the performance of the RandomForestClassifier, it achieved an accuracy rate of 86 percentage, indicating that it accurately classified 86 percentage of instances across all flexibility levels. Precision, which represents the proportion of true positive predictions out of all positive predictions made by the model, provides insights into the model’s accuracy for each flexibility level. For example, a precision score of 0.90 for flexibility level 0.0 implies that 90 percentage of instances predicted as level 0.0 by the model were actually level 0.0. Similarly, recall, also known as sensitivity, indicates the pro- portion of true positives correctly identified by the model out of all actual positives. With a recall score of 0.98 for flexibility level 0.0, the model captured 98 percentage of all instances actually at level 0.0. Additionally, the F1-score, a harmonic mean of precision and recall, offers a balanced measure of the model’s performance. Moving on to the KNeighborsClassifier, it achieved an accuracy of 80 percentage, signifying its ability to correctly classify 80 percentage of instances across all flexibility levels. The Support Vector Classifier (SVC) demonstrated an accuracy of 75 percentage, showcasing its overall effectiveness in classifying instances. The Logistic Regression model achieved an accuracy of 64 percentage, underscoring its overall correctness in classifying instances. Lastly, the XGBClassifier, akin to the RandomForestClassifier, attained an accuracy of 86 percentage, demonstrating its effectiveness in classifying instances. Similar to the RandomForestClassifier, precision, recall, and F1-score metrics provide insights into the all the four model’s performance for each flexibility level.
 
-df.Age = df.Age.astype(str)
-df.info()
+B. Insights Visualization
 
-df.isnull().sum()
+To delve deeper into model performance, a confusion matrix was generated specifically for the RandomForestClassifier. This visualization offers a clear depiction of the model’s ability to correctly classify students into different flexibility levels. By visualizing the confusion matrix, we gain a deeper understanding of the model’s strengths and weaknesses in accurately predicting flexibility levels.
 
-df.describe()
+<img width="448" alt="Screenshot 2024-09-26 at 8 33 09 AM" src="https://github.com/user-attachments/assets/80974c08-f2a8-470e-82ab-ea79488ceee0">
 
-scaler = OrdinalEncoder()
-names = df.columns
-d = scaler.fit_transform(df)
-
-scaled_df = pd.DataFrame(d, columns=names)
-scaled_df.head()
-
-oversample = SMOTE()
-features, labels=  oversample.fit_resample(scaled_df.drop(["Flexibility Level"],axis=1),scaled_df["Flexibility Level"])
-
-X_train, X_test, y_train, y_test=train_test_split(features, labels,test_size=0.33,random_state=42)
-
-models = {
-    "Random Forest Classifier": RandomForestClassifier(),
-    "K-Nearest Neighbors Classifier": KNeighborsClassifier(),
-    "Support Vector Classifier (SVC)": SVC(),
-    "Logistic Regression": LogisticRegression()
-}
-
-for model_name, model in models.items():
-    model.fit(X_train, y_train)
-    y_pred = model.predict(X_test)
-
-    report = classification_report(y_test, y_pred, zero_division=1, output_dict=True)
-
-    print(f"**{model_name}:**")
-    print("-" * 30)
-    print(f"- **Accuracy:** {report['accuracy']:.0%}")
-    for class_label, metrics in report.items():
-        if class_label.isdigit():
-            print(f"- **Class {int(class_label)}:**")
-            print(f"  - **Precision:** {metrics['precision']:.0%}")
-            print(f"  - **Recall:** {metrics['recall']:.0%}")
-            print(f"  - **F1-score:** {metrics['f1-score']:.0%}")
-    print("-" * 30)
-    print()
-models = [RandomForestClassifier(), KNeighborsClassifier(), SVC(), LogisticRegression()]
-scores = dict()
-
-for m in models:
-    m.fit(X_train, y_train)
-    y_pred = m.predict(X_test)
-
-    print(f'model: {str(m)}')
-    print(classification_report(y_test,y_pred, zero_division=1))
-    print('-'*30, '\n')
-
-    model=RandomForestClassifier()
-model.fit(X_train, y_train)
-y_pred = model.predict(X_test)
-print(classification_report(y_test,y_pred, zero_division=1))
-
-cm = confusion_matrix(model.predict(X_test),y_test)
-disp = ConfusionMatrixDisplay(cm, display_labels=["High","Low","Moderate"])
-disp.plot()
-plt.title("Confusion Matrix")
-plt.show()
-
-correlation_matrix = scaled_df.corr()
-plt.figure(figsize=(12, 8))
-sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', fmt=".2f")
-plt.title('Correlation Matrix')
-plt.show()
